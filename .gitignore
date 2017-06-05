@@ -15,6 +15,7 @@
 !*.ipynb
 !*.jpeg
 !*.jpg
+!*.mdp
 !*.mol2
 !*.mpg
 !*.pbs
