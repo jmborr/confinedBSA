@@ -30,6 +30,7 @@
 !*.sh
 !*.vmd
 !*.xml
+!*.xvg
 !*.yaml
 junk*
 .ipynb_checkpoints
