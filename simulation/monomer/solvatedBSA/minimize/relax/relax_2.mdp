@@ -10,7 +10,7 @@ dt		= 0.001		; 1 fs
 ; ################
 ; Output control
 ; ################
-nstxout		= 10000		; save coordinates every 10 ps
+nstxout		= 10000		; save coordinates every 10 ps to .trr (nstxtcout for .xtc)
 nstvout		= 10000		; save velocities every 10 ps
 nstenergy	= 10000		; save energies every 10 ps
 nstlog		= 10000		; update log file every 10 ps
