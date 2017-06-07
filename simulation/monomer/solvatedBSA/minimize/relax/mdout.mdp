@@ -1,8 +1,8 @@
 ;
 ;	File 'mdout.mdp' was generated
-;	By user: unknown (11226)
+;	By user: jbq (11226)
 ;	On host: leioa
-;	At date: Thu Jun  1 17:46:21 2017
+;	At date: Tue Jun  6 19:51:00 2017
 
 ;
 
@@ -18,7 +18,7 @@ integrator               = md
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.001
-nsteps                   = 1000000
+nsteps                   = 500000
 ; For exact run continuation or redoing part of a run
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)

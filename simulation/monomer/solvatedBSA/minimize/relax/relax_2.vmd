@@ -340,8 +340,8 @@ display aodirect 0.300000
 display dof off
 display dof_fnumber 64.000000
 display dof_focaldist 0.700000
-mol new /SNS/CAMM/users/jbq/research/confinedBSA/simulation/monomer/solvatedBSA/minimize/relax/relax_1.gro type gro first 0 last -1 step 1 filebonds 1 autobonds 1 waitfor all
-mol addfile /SNS/CAMM/users/jbq/research/confinedBSA/simulation/monomer/solvatedBSA/minimize/relax/relax_2.trr type trr first 0 last -1 step 1 filebonds 1 autobonds 1 waitfor all
+mol new relax_2.gro type gro first 0 last -1 step 1 filebonds 1 autobonds 1 waitfor all
+mol addfile relax_2.trr type trr first 0 last -1 step 1 filebonds 1 autobonds 1 waitfor all
 mol delrep 0 top
 mol representation Lines
 mol color Name
@@ -411,8 +411,8 @@ mol clipplane center 5 1 top {0.0 0.0 0.0}
 mol clipplane color  5 1 top {0.5 0.5 0.5 }
 mol clipplane normal 5 1 top {0.0 0.0 1.0}
 mol clipplane status 5 1 top {0}
-mol rename top relax_1.gro
-set viewpoints([molinfo top]) {{{1 0 0 -48.4836} {0 1 0 -55.9458} {0 0 1 -47.7473} {0 0 0 1}} {{0.137742 -0.361731 -0.922057 0} {0.0793949 0.931968 -0.353756 0} {0.987291 -0.0244807 0.15709 0} {0 0 0 1}} {{0.0133955 0 0 0} {0 0.0133955 0 0} {0 0 0.0133955 0} {0 0 0 1}} {{1 0 0 0} {0 1 0 0} {0 0 1 0} {0 0 0 1}}}
+mol rename top relax_2.gro
+set viewpoints([molinfo top]) {{{1 0 0 -47.0513} {0 1 0 -47.0759} {0 0 1 -46.9751} {0 0 0 1}} {{0.992714 0.118294 0.0229999 0} {-0.119612 0.990446 0.0686644 0} {-0.0146572 -0.0709139 0.997377 0} {0 0 0 1}} {{0.0186801 0 0 0} {0 0.0186801 0 0} {0 0 0.0186801 0} {0 0 0 1}} {{1 0 0 0} {0 1 0 0} {0 0 1 0} {0 0 0 1}}}
 lappend viewplist [molinfo top]
 set topmol [molinfo top]
 # done with molecule 0

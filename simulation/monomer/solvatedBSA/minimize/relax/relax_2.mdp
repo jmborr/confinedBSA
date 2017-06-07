@@ -4,7 +4,7 @@ define		= -DPOSRES	; position restrain the protein
 ; Run parameters
 ; ################
 integrator	= md		; leap-frog integrator
-nsteps		= 1000000	; 1ns
+nsteps		= 500000	; 0.5ns
 dt		= 0.001		; 1 fs
 ;
 ; ################
