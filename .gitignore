@@ -11,6 +11,7 @@
 !*.docx
 !*.f
 !*.gif
+!*.gro
 !*.in
 !*.ipynb
 !*.jpeg
