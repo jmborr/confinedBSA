@@ -31,6 +31,7 @@
 !*.py
 !*.sdf
 !*.sh
+!*.top
 !*.vmd
 !*.xml
 !*.xvg
