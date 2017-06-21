@@ -2665,8 +2665,6 @@
 ; Z -CA-X -Y improper torsion. CA is any ring carbon (CA,CB,CN,CV,CW,CR,CK,CQ,CS,C*)
 #define improper_Z_CA_X_Y       180.0      4.60240   2
 
-
-
 ; Added by DvdS for DMSO 17/06/2006
  [ bondtypes ]
    O2     S    1  0.153	400000
