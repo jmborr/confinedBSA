@@ -302,6 +302,9 @@
   C     CW      1    0.14900   334720.0   ;
   C_2   CW      1    0.14900   334720.0   ;
   C_3   CW      1    0.14900   334720.0   ;
+  SIO  OSI      1    0.15783   251040.0   ;
+  SIO  OA       1    0.15783   251040.0   ;
+  HO   OA       1    0.09450   462750.4   ;
 
 [ constrainttypes ]
 ; this section is implemented manually from bond & angle values
@@ -1300,7 +1303,11 @@
   S      CA     CA      1   119.400    711.280   ; thioanisole             copy from SY-CA-CA      rcr HIVRT
   P      CA     CA      1   119.400    711.280   ; 
   CA     S      CT      1   104.200    518.816   ; thioanisole             adjusted from CT-S-CT  rcr HIVRT
- 
+  OSI    SIO    OSI     1   109.150    397.480
+  OA     SIO    OSI     1   109.150    397.480
+  SIO    OSI    SIO     1   146.499    397.480
+  SIO    OA     HO      1   109.150    397.480
+
 ; Charged Glutamine
 ; See. Patriksson et al. Int. J. Mass. Spectrom. 248 pp 124-135 (2006)
   OH     C      N       1   115.43     292.88
@@ -2669,23 +2676,4 @@
 ; [ bondtypes ]
 ;   O2     S    1  0.153	400000
 
-; [ angletypes ]
-; O2 S CT 1 107 400
-
-; [ dihedraltypes ]
-; O2 S CT HC 3       1.35352   4.06057   0.00000  -5.41410   0.00000   0.00000 ; sulfide all-atom
-
-; Added for cristobalite
-[ bondtypes ]
-; i    j  func       b0          kb
-  SIO  OSI      1    0.15783     251040.  ; From GROMACS
-  SIO  OA       1    0.15783     251040.  ;
-  HO   OA       1    0.09450     462750.4
-
-[ angletypes ]
-;  i    j    k  func       th0       cth
-   OSI  SIO  OSI    1   109.150     397.480
-   OA   SIO  OSI    1   109.150     397.480
-   SIO  OSI  SIO    1   146.499     397.480
-   SIO   OA   HO    1   109.150     397.480
 
