@@ -96,7 +96,7 @@ SIO         1
 
 [ atoms ]
 ; id    at type     res nr  residu name at name  cg nr  charge   mass
-1       SIO         1       I           I        1      -1       28.0855
+1       SIO         1       I           I        1  1.1144720182324641  28.0855
 
 [ moleculetype ]
 ; molname   nrexcl
@@ -104,7 +104,7 @@ OSI         1
 
 [ atoms ]
 ; id    at type     res nr  residu name at name  cg nr  charge   mass
-OSI     OSI         1       I           I        1      -1       15.9994
+OSI     OSI         1       I           I        1      -0.55    15.9994
 
 [ moleculetype ]
 ; molname   nrexcl
@@ -112,7 +112,7 @@ OA          1
 
 [ atoms ]
 ; id    at type     res nr  residu name at name  cg nr  charge   mass
-1       OA          1       I           I        1      -1       15.9994
+1       OA          1       I           I        1      -0.90    15.9994
 
 [ moleculetype ]
 ; molname   nrexcl
@@ -120,4 +120,4 @@ HO          1
 
 [ atoms ]
 ; id    at type     res nr  residu name at name  cg nr  charge   mass
-1       HO          1       I           I        1      -1       1.00800
+1       HO          1       I           I        1      0.40     1.00800

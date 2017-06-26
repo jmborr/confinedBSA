@@ -1643,7 +1643,7 @@ HD23	    opls_140	 0.060	    1
 ; crystobalite atom types, each as a residue
 [ SIO ]
  [ atoms ]
-    SIO    SIO        1.100     0
+    SIO    SIO 1.1144720182324641     0
 [ OSI ]
  [ atoms ]
     OSI    OSI       -0.550     0
