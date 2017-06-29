@@ -1,0 +1,15 @@
+; Manually created
+
+; Include forcefield parameters
+#include "./oplsaa.ff/forcefield.itp"
+
+; Include chain topologies
+#include "SIL.itp"
+
+[ system ]
+; Name
+Silica, t= 0.0
+
+[ molecules ]
+; Compound        #mols
+SIL                 1
