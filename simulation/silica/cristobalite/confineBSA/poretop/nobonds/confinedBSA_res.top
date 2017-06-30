@@ -1,0 +1,55 @@
+;
+;	File 'confinedBSA.top' was generated
+;	By user: unknown (11226)
+;	On host: leioa
+;	At date: Fri Jun 23 15:16:23 2017
+
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                 :-) GROMACS - gmx pdb2gmx, VERSION 5.1.2 (-:
+;	
+;	Executable:   /usr/bin/gmx
+;	Data prefix:  /usr
+;	Command line:
+;	  gmx pdb2gmx -f confinedBSA_0.gro -o confinedBSA.gro -p confinedBSA.top -i confinedBSA.itp -water spce -ff oplsaa
+;	Force field was read from current directory or a relative path - path added.
+;
+
+; Include forcefield parameters
+#include "./oplsaa.ff/forcefield.itp"
+
+; Include chain topologies
+#include "confinedBSA_Protein.itp"
+#include "confinedBSA_Silica.itp"
+#ifdef POSRES_SILICA
+#include "close_renumbered.itp"
+#include "far_renumbered.itp"
+#endif
+
+
+
+; Include water topology
+#include "./oplsaa.ff/spce.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "./oplsaa.ff/ions.itp"
+
+
+[ system ]
+; Name
+confined BSA, t= 0.0
+
+[ molecules ]
+; Compound        #mols
+Protein             1
+Silica              1
+SOL               622
