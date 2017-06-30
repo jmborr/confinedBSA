@@ -1,0 +1,4 @@
+close_SIO_atoms = group "SIO" and within 0.4 of group "Protein";
+close_OSI_atoms = group "OSI" and within 0.4 of group "Protein";
+close_OA_atoms = group "OA" and within 0.4 of group "Protein";
+close_SIO_atoms or close_OSI_atoms or close_OA_atoms;
