@@ -1,4 +1,4 @@
-# This file was created Thu Jul  6 09:58:56 2017
+# This file was created Fri Jul  7 10:59:57 2017
 # Created by:
 #                    :-) GROMACS - gmx msd, VERSION 5.1.2 (-:
 # 
@@ -8,7 +8,7 @@
 #   gmx msd -f equil_1.xtc -s equil_1.tpr -o equil_1_msd.xvg -rmcomm
 # gmx msd is part of G R O M A C S:
 #
-# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+# GROtesk MACabre and Sinister
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

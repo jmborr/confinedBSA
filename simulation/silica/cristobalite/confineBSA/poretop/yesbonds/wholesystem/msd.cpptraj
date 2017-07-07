@@ -1,0 +1,9 @@
+parm BSA.pdb
+trajin equil_1_BSA.dcd
+rms '@H*' refindex 1
+
+average crdset avg_xyz start 1 end 500
+run
+rms '@H*' ref avg_xyz
+atomicfluct out fluct.agr '@H*' bymask start 1 end 500
+
