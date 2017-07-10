@@ -2,18 +2,12 @@
 integrator = md ; leap-frog integrator
 
 dt		= 0.001   ; units of ps
-nsteps		= 1000000  ;
-
-; VELOCITY GENERATION
-gen_vel		= yes		; assign velocities from Maxwell distribution
-gen_temp	= _TEMP_		; temperature for Maxwell distribution (K)
-gen_seed	= -1		; generate a random seed
+nsteps		= 1000000 ;
 
 ; OUTPUT CONTROL
-nstxout		= 20000		; save coordinates every 1.0 ps
-nstvout		= 20000		; save velocities every 1.0 ps
-nstenergy	= 20000		; save energies every 1.0 ps
-nstlog		= 20000		; update log file every 1.0 ps
+nstxout-compressed = 1000  ; save position coordinates using lossy compression
+nstenergy          = 1000  ; save energies every 1000 steps
+nstlog	           = 1000  ; update log file every 10000 steps
 
 ; NEIGHBORSEARCHING PARAMETERS
 periodic_molecules       = yes
@@ -52,13 +46,8 @@ ewald-geometry           = 3d
 epsilon-surface          = 0
 
 ; TEMPERATURE AND PRESSURE
-tcoupl		= v-rescale            ; modified Berendsen thermostat
+tcoupl		= V-rescale            ; modified Berendsen thermostat
 tc-grps         = Protein non-Protein  ; couple temperature to groups
-tau_t		= 1.0 1.0            ; time constant, in ps
-ref_t		= _TEMP_ _TEMP_        ; reference temperature, one for each group, in K
-pcoupl		= berendsen            ; Pressure coupling on in NPT
-pcoupltype      = isotropic            ; uniform scaling of box vectors
-tau_p           = 500.0                ; time constant, in ps
-ref_p           = 1.0                  ; reference pressure, in bar
-compressibility   = 4.5e-5             ; isothermal compressibility of water, bar^-1
-refcoord_scaling  = com
+tau_t		= 0.1 0.1            ; time constant, in ps
+ref_t		= _TEMP_ _TEMP_              ; reference temperature, one for each group, in K
+pcoupl		= no                   ; no pressure coupling in NVT
