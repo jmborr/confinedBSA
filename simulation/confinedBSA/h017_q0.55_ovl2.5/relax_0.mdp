@@ -1,0 +1,59 @@
+; RUN CONTROL PARAMETERS
+integrator = md ; leap-frog integrator
+
+dt		= 0.00000001   ; units of ps
+nsteps		= 10000  ;
+
+; VELOCITY GENERATION
+gen_vel		= yes		; assign velocities from Maxwell distribution
+gen_temp	= 1.0		; temperature for Maxwell distribution (K)
+gen_seed	= -1		; generate a random seed
+
+; OUTPUT CONTROL
+nstxout		= 100		; save coordinates every 1.0 ps
+nstvout		= 100		; save velocities every 1.0 ps
+nstenergy	= 100		; save energies every 1.0 ps
+nstlog		= 100		; update log file every 1.0 ps
+
+; NEIGHBORSEARCHING PARAMETERS
+periodic_molecules       = yes
+cutoff-scheme            = Verlet ; cut-off scheme (Verlet: particle based cut-offs, group: using charge groups)
+nstlist                  = 1 ; nblist update frequency
+ns_type                  = grid ; ns algorithm (simple or grid)
+pbc                      = xyz ; Periodic boundary conditions: xyz, no, xy
+verlet-buffer-tolerance  = 0.005 ; Allowed energy error due to the Verlet buffer in kJ/mol/ps per atom, a value of -1 means: use rlist
+rlist                    = 1 ; nblist cut-off        
+rlistlong                = -1 ; long-range cut-off for switched potentials
+nstcalclr                = -1
+
+; OPTIONS FOR BONDS    
+constraints              = none
+
+; OPTIONS FOR ELECTROSTATICS AND VDW
+coulombtype              = PME
+coulomb-modifier         = Potential-shift-Verlet
+rcoulomb-switch          = 0
+rcoulomb                 = 1.20
+vdw-type                 = Cut-off
+vdw-modifier             = Potential-shift-Verlet
+rvdw-switch              = 0
+rvdw                     = 1.20
+DispCorr                 = EnerPres ; Apply long range dispersion corrections for Energy and Pressure
+table-extension          = 1 ; Extension of the potential lookup tables beyond the cut-off
+fourierspacing           = 0.12 ; Spacing for the PME/PPPM FFT grid
+fourier-nx               = 0 ; FFT grid size, when a value is 0 fourierspacing will be used
+fourier-ny               = 0
+fourier-nz               = 0
+pme-order                = 4
+ewald-rtol               = 1e-05
+ewald-rtol-lj            = 0.001
+lj-pme-comb-rule         = Geometric
+ewald-geometry           = 3d
+epsilon-surface          = 0
+
+; TEMPERATURE AND PRESSURE
+tcoupl		= V-rescale            ; modified Berendsen thermostat
+tc-grps         = Protein non-Protein  ; couple temperature to groups
+tau_t		= 0.00001 0.00001      ; time constant, in ps
+ref_t		= 1.0 1.0                ; reference temperature, one for each group, in K
+pcoupl		= no                   ; no pressure coupling in NVT
