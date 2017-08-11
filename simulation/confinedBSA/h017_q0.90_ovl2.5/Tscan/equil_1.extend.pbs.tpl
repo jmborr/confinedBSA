@@ -16,6 +16,7 @@ extratime=1000   # extend simulations by this much (in picoseconds)
 last=50  # no more than these simulations
 prev=_PREV_
 curr=$(($prev + 1))
+echo "Starting equil_1.${curr}"
 
 for rawt in $(seq 40 20 420); do
   t=`printf T%03d $rawt`
